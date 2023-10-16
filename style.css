@@ -1,52 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
 }
 
-#logo{
-    height: 50px;
+#logo {
+  height: 50px;
 }
-nav{
-    height: auto;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-inline: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+nav {
+  height: auto;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-inline: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-body{
-    background-color: rgb(42, 0, 0);
+body {
+  background-color: rgb(42, 0, 0);
+  height: 100vh;
 }
-button{
-    color: black; 
-    background-color: antiquewhite;
-    padding: 10px;
-    border-radius: 50px;
+button {
+  color: black;
+  background-color: antiquewhite;
+  padding: 10px;
+  border-radius: 50px;
 }
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    gap: 20px;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    /* dans ce qui reste niveau place, il prends 
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  /* dans ce qui reste niveau place, il prends 
     ce que tu as besoin en respectant les ratios */
-    
 }
-nav >ul>li{
-    
-        display: inline; /* Les éléments seront côte à côte */
-        margin-right: 10px; /* Marge à droite pour l'espacement */
-      
+nav > ul > li {
+  display: inline; /* Les éléments seront côte à côte */
+  margin-right: 10px; /* Marge à droite pour l'espacement */
 }
-.marginLeft{
-    margin-left: auto;
+.marginLeft {
+  margin-left: auto;
+}
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 3fr 1fr;
 }
 
+main {
+  /* background-color: green; */
+  grid-column: 1/2;
+}
+aside {
+  background-color: rgba(100, 0, 0, 0.4);
+  grid-column: 2/3;
+  padding: 10px;
+  position: sticky;
+  top: 0; /* L'élément reste en haut de l'écran */
+  height: 100%; /* Remplit la hauteur de son parent */
+  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+
+aside >div> ul {
+  list-style: none;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+aside > div >ul > li {
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+}
