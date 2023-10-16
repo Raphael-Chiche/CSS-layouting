@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+#logo{
+    height: 50px;
+}
+nav{
+    height: auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+body{
+    background-color: rgb(42, 0, 0);
+}
+button{
+    color: black; 
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 50px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    /* dans ce qui reste niveau place, il prends 
+    ce que tu as besoin en respectant les ratios */
+    
+}
+nav >ul>li{
+    
+        display: inline; /* Les éléments seront côte à côte */
+        margin-right: 10px; /* Marge à droite pour l'espacement */
+      
+}
+.marginLeft{
+    margin-left: auto;
+}
+
