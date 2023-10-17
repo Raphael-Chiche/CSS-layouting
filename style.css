@@ -49,7 +49,7 @@ nav > ul > li {
 }
 .grid {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
   grid-template-columns: 3fr 1fr;
 }
 
@@ -65,9 +65,9 @@ aside {
   grid-column: 2/3;
   padding: 10px;
   position: sticky;
-  top: 0; /* L'élément reste en haut de l'écran */
-  height: 100%; /* Remplit la hauteur de son parent */
-  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+  top: 0; 
+  height: 100vh; 
+  
 }
 
 aside > div > ul {
@@ -79,11 +79,6 @@ aside > div > ul {
 aside > div > ul > li {
   font-style: oblique;
   font-weight: bolder;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
 }
 
 .Tweet:nth-child(3n + 1) {
@@ -121,6 +116,10 @@ aside > div > ul > li {
   width: 70px;
 }
 
+.sticky{
+    position: sticky;
+    top: 0;
+}
 @media (max-width: 420px) {
   main {
     /* background-color: green; */
