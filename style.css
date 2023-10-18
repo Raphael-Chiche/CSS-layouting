@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  color: white;
 }
 
 #logo {
@@ -11,21 +10,24 @@
 }
 nav {
   height: auto;
-  background-color: black;
+  background-color:  #000000;
   display: flex;
   align-items: center;
   gap: 20px;
   padding-inline: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
+  color: white;
+  
 }
+
 body {
-  background-color: rgb(42, 0, 0);
+  background-color:   #63c9ea;
   height: 100vh;
 }
 button {
-  color: black;
-  background-color: antiquewhite;
+  color: white;
+  background-color: #333;
   padding: 10px;
   border-radius: 50px;
 }
@@ -61,7 +63,8 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 aside {
-  background-color: rgba(100, 0, 0, 0.4);
+    background-color:  #333;
+    color: white;
   grid-column: 2/3;
   padding: 10px;
   position: sticky;
@@ -80,33 +83,28 @@ aside > div > ul > li {
   font-weight: bolder;
 }
 
-.Tweet:nth-child(3n + 1) {
-  background-color: red;
+.Tweet {
+  background-color:  #ADD8E6;
   margin: 10px;
   border-radius: 25px;
   padding: 20px;
+  color: white;
+}
+.Tweet:nth-child(3n + 1) {
   grid-column: 1/2;
 }
 
 .Tweet:nth-child(3n + 2) {
-  background-color: red;
-  margin: 10px;
-  border-radius: 25px;
-  padding: 20px;
   grid-column: 2/3;
 }
 .Tweet:nth-child(3n + 3) {
-  background-color: red;
-  margin: 10px;
-  border-radius: 25px;
-  padding: 20px;
   grid-column: 1/3;
 }
 
 .Tweet > header {
   display: flex;
   gap: 10px;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1 1 0;
 }
 .profilPicture {
@@ -122,17 +120,24 @@ aside > div > ul > li {
 @media (max-width: 700px) {
   nav {
     height: auto;
-    background-color: black;
+    background-color: #1DA1F2;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     padding-inline: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    flex-direction: column;
   }
 }
 @media (max-width: 470px) {
+    .Tweet > header {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        flex: 1 1 0;
+    }
   main {
     /* background-color: green; */
     grid-column: 1/2;
@@ -140,30 +145,20 @@ aside > div > ul > li {
     flex-basis: auto;
     grid-template-columns: 1fr;
   }
-  .Tweet:nth-child(3n + 1) {
-    background-color: red;
+  .Tweet{
+    background-color: #333;
     margin: 10px;
     border-radius: 25px;
     padding: 20px;
-    grid-column: 1/3;
+    color: white;
   }
-
-  .Tweet:nth-child(3n + 2) {
-    background-color: red;
-    margin: 10px;
-    border-radius: 25px;
-    padding: 20px;
-    grid-column: 1/3;
-  }
+  .Tweet:nth-child(3n + 1),
+  .Tweet:nth-child(3n + 2),
   .Tweet:nth-child(3n + 3) {
-    background-color: red;
-    margin: 10px;
-    border-radius: 25px;
-    padding: 20px;
     grid-column: 1/3;
   }
   aside {
-    background-color: rgba(100, 0, 0, 0.4);
+    background-color: #8d99ae;
     grid-column: 1/2;
     padding: 10px;
     height: auto;
@@ -176,6 +171,5 @@ aside > div > ul > li {
   .sticky {
     order: -1;
     position: inherit;
-    
   }
 }
