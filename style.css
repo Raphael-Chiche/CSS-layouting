@@ -88,7 +88,7 @@ aside > div > ul > li {
   margin: 10px;
   border-radius: 25px;
   padding: 20px;
-  color: white;
+  color: black;
 }
 .Tweet:nth-child(3n + 1) {
   grid-column: 1/2;
@@ -163,7 +163,7 @@ aside > div > ul > li {
     margin: 10px;
     border-radius: 25px;
     padding: 20px;
-    color: white;
+    color: black;
   }
   .Tweet:nth-child(3n + 1),
   .Tweet:nth-child(3n + 2),
