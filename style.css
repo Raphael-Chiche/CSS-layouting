@@ -98,6 +98,8 @@ aside h2 {
   color: white;
   border: solid white 1px;
   border-radius: 25px;
+  container-type: inline-size;
+  container-name: Tweetcontainer;
 }
 .Tweet:nth-child(3n) {
   grid-column: 1/2;
@@ -120,11 +122,23 @@ aside h2 {
   margin-bottom: 10px;
 }
 
+@container Tweetcontainer (max-width: 500px) {
+  .Tweet:nth-child(3n +2) > header {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex: 1 1 0;
+    margin-bottom: 10px;
+  }
+}
+
 .Tweet > header > div {
   display: flex;
   gap: 5px;
   flex-direction: column;
 }
+
+
 .profilPicture {
   border-radius: 50%;
   height: 70px;
